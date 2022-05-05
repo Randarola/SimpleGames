@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleGames"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Znajdź wszystkie pary pasujących zwierząt" Height="450" Width="400">
     <Grid>
         
     </Grid>
