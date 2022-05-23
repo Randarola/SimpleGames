@@ -37,7 +37,13 @@ namespace SimpleGames
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            tenthsOfSecondsElapsed++;
+            timeTextBlock.Text = (tenthsOfSecondsElapsed / 10F).ToString("0.0s");
+            if(matchesFound == 8)
+            {
+                timer.Stop();
+                timeTextBlock.Text = timeTextBlock.Text + " - Jeszcze raz?";
+            }
         }
 
         private void SetUpGame()
@@ -87,6 +93,14 @@ namespace SimpleGames
             }
 
 
+        }
+
+        private void timeTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(matchesFound == 8)
+            {
+                SetUpGame();
+            }
         }
     }
 }
