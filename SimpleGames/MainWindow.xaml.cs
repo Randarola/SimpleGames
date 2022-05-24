@@ -72,13 +72,16 @@ namespace SimpleGames
                     animalEmoji.RemoveAt(index);
                 }
             }
+            timer.Start();
+            tenthsOfSecondsElapsed = 0;
+            matchesFound = 0;
         }
 
         TextBlock lastTextblockClicked;
         bool findingMatch = false;
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            TextBlock textBlock = sender as TextBlock;
+                TextBlock textBlock = sender as TextBlock;
             if (findingMatch == false)
             {
                 textBlock.Visibility = Visibility.Hidden;
@@ -87,6 +90,7 @@ namespace SimpleGames
             }
             else if (textBlock.Text == lastTextblockClicked.Text)
             {
+                matchesFound++;
                 textBlock.Visibility = Visibility.Hidden;
                 findingMatch = false;
             }
@@ -95,8 +99,6 @@ namespace SimpleGames
                 lastTextblockClicked.Visibility = Visibility.Visible;
                 findingMatch = false;
             }
-
-
         }
 
         private void timeTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
