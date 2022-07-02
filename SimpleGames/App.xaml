@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:SimpleGames"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="BackgroundColor" Color="#118a78"/>
     </Application.Resources>
 </Application>
