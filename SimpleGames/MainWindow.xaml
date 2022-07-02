@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleGames"
         mc:Ignorable="d"
-        Title="TicTacToe" Height="700" Width="600">
+        Title="TicTacToe" Height="700" Width="600"
+        Icon="./Assets/icon.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
